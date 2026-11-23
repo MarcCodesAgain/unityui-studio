@@ -1,0 +1,170 @@
+{
+  "summary": {
+    "model": "claude-haiku-5-5",
+    "effort": "low",
+    "date": "2026-11-23T16:50:24.268Z",
+    "cases": 12,
+    "passed": 8,
+    "validJson": 12,
+    "withoutDroppedNodes": 12,
+    "withoutWarnings": 9,
+    "usedRequiredComponents": 11,
+    "avgSeconds": 6.53,
+    "avgCostUsd": 0.00084,
+    "totalCostUsd": 0.0101
+  },
+  "results": [
+    {
+      "id": "login",
+      "ok": true,
+      "valid": true,
+      "dropped": 0,
+      "warnings": [],
+      "missing": [],
+      "nodes": 9,
+      "ms": 7105,
+      "costUsd": 0.0007857000000000001,
+      "outputTokens": 1522
+    },
+    {
+      "id": "signup-es",
+      "ok": true,
+      "valid": true,
+      "dropped": 0,
+      "warnings": [],
+      "missing": [],
+      "nodes": 4,
+      "ms": 2479,
+      "costUsd": 0.00031130000000000003,
+      "outputTokens": 570
+    },
+    {
+      "id": "pricing",
+      "ok": false,
+      "valid": true,
+      "dropped": 0,
+      "warnings": [
+        "4 top-level headings; a screen usually has one."
+      ],
+      "missing": [],
+      "nodes": 38,
+      "ms": 6933,
+      "costUsd": 0.0010653,
+      "outputTokens": 2082
+    },
+    {
+      "id": "dashboard",
+      "ok": true,
+      "valid": true,
+      "dropped": 0,
+      "warnings": [],
+      "missing": [],
+      "nodes": 31,
+      "ms": 9756,
+      "costUsd": 0.0013451000000000001,
+      "outputTokens": 2640
+    },
+    {
+      "id": "team-table",
+      "ok": true,
+      "valid": true,
+      "dropped": 0,
+      "warnings": [],
+      "missing": [],
+      "nodes": 10,
+      "ms": 8172,
+      "costUsd": 0.0008589000000000001,
+      "outputTokens": 1668
+    },
+    {
+      "id": "settings",
+      "ok": false,
+      "valid": true,
+      "dropped": 0,
+      "warnings": [],
+      "missing": [
+        "Checkbox"
+      ],
+      "nodes": 5,
+      "ms": 8049,
+      "costUsd": 0.0009035,
+      "outputTokens": 1757
+    },
+    {
+      "id": "profile",
+      "ok": true,
+      "valid": true,
+      "dropped": 0,
+      "warnings": [],
+      "missing": [],
+      "nodes": 17,
+      "ms": 3167,
+      "costUsd": 0.0004484,
+      "outputTokens": 848
+    },
+    {
+      "id": "empty-state",
+      "ok": true,
+      "valid": true,
+      "dropped": 0,
+      "warnings": [],
+      "missing": [],
+      "nodes": 17,
+      "ms": 3955,
+      "costUsd": 0.0004937,
+      "outputTokens": 939
+    },
+    {
+      "id": "checkout",
+      "ok": false,
+      "valid": true,
+      "dropped": 0,
+      "warnings": [
+        "Heading jumps from level 2 to 4; screen reader users navigate by heading level."
+      ],
+      "missing": [],
+      "nodes": 29,
+      "ms": 5693,
+      "costUsd": 0.000925,
+      "outputTokens": 1802
+    },
+    {
+      "id": "error-page",
+      "ok": false,
+      "valid": true,
+      "dropped": 0,
+      "warnings": [
+        "Heading jumps from level 1 to 3; screen reader users navigate by heading level."
+      ],
+      "missing": [],
+      "nodes": 24,
+      "ms": 10172,
+      "costUsd": 0.0012602,
+      "outputTokens": 2471
+    },
+    {
+      "id": "contact-ca",
+      "ok": true,
+      "valid": true,
+      "dropped": 0,
+      "warnings": [],
+      "missing": [],
+      "nodes": 8,
+      "ms": 6452,
+      "costUsd": 0.0007198,
+      "outputTokens": 1388
+    },
+    {
+      "id": "feature-grid",
+      "ok": true,
+      "valid": true,
+      "dropped": 0,
+      "warnings": [],
+      "missing": [],
+      "nodes": 39,
+      "ms": 6392,
+      "costUsd": 0.0009718000000000001,
+      "outputTokens": 1896
+    }
+  ]
+}

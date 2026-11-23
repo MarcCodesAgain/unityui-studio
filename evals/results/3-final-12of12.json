@@ -1,0 +1,2542 @@
+{
+  "summary": {
+    "model": "claude-haiku-5-5",
+    "effort": "low",
+    "date": "2026-11-23T17:04:03.552Z",
+    "cases": 12,
+    "passed": 12,
+    "validJson": 12,
+    "withoutDroppedNodes": 12,
+    "withoutWarnings": 12,
+    "usedRequiredComponents": 12,
+    "avgSeconds": 6.63,
+    "medianSeconds": 6.07,
+    "maxSeconds": 10,
+    "avgCostUsd": 0.00086,
+    "totalCostUsd": 0.0103
+  },
+  "results": [
+    {
+      "id": "login",
+      "ok": true,
+      "valid": true,
+      "dropped": 0,
+      "warnings": [],
+      "missing": [],
+      "nodes": 11,
+      "ms": 2513,
+      "costUsd": 0.00036384,
+      "outputTokens": 674,
+      "document": {
+        "title": "Login screen",
+        "nodes": [
+          {
+            "id": "root",
+            "parent": null,
+            "component": "Stack",
+            "props": {
+              "direction": "vertical",
+              "gap": "xl",
+              "align": "center",
+              "justify": "center",
+              "wrap": false
+            }
+          },
+          {
+            "id": "card",
+            "parent": "root",
+            "component": "Card",
+            "props": {
+              "variant": "outlined"
+            }
+          },
+          {
+            "id": "card-header",
+            "parent": "card",
+            "component": "CardHeader",
+            "props": {}
+          },
+          {
+            "id": "title",
+            "parent": "card-header",
+            "component": "Typography",
+            "props": {
+              "variant": "h1",
+              "color": "primary",
+              "text": "Sign in"
+            }
+          },
+          {
+            "id": "subtitle",
+            "parent": "card-header",
+            "component": "Typography",
+            "props": {
+              "variant": "bodySm",
+              "color": "secondary",
+              "text": "Welcome back. Enter your details to continue."
+            }
+          },
+          {
+            "id": "card-body",
+            "parent": "card",
+            "component": "CardBody",
+            "props": {}
+          },
+          {
+            "id": "login-form",
+            "parent": "card-body",
+            "component": "Form",
+            "props": {
+              "title": null,
+              "description": null,
+              "submitLabel": "Sign in",
+              "fields": [
+                {
+                  "type": "input",
+                  "name": "email",
+                  "label": "Email address",
+                  "required": true,
+                  "inputType": "email",
+                  "placeholder": "name@company.com"
+                },
+                {
+                  "type": "input",
+                  "name": "password",
+                  "label": "Password",
+                  "required": true,
+                  "inputType": "password",
+                  "placeholder": "Enter your password"
+                },
+                {
+                  "type": "checkbox",
+                  "name": "remember",
+                  "label": "Remember me",
+                  "required": false
+                }
+              ]
+            }
+          },
+          {
+            "id": "card-footer",
+            "parent": "card",
+            "component": "CardFooter",
+            "props": {
+              "divider": true
+            }
+          },
+          {
+            "id": "reset-stack",
+            "parent": "card-footer",
+            "component": "Stack",
+            "props": {
+              "direction": "horizontal",
+              "gap": "sm",
+              "align": "center",
+              "justify": "center",
+              "wrap": false
+            }
+          },
+          {
+            "id": "reset-text",
+            "parent": "reset-stack",
+            "component": "Typography",
+            "props": {
+              "variant": "bodySm",
+              "color": "secondary",
+              "text": "Forgot your password?"
+            }
+          },
+          {
+            "id": "reset-button",
+            "parent": "reset-stack",
+            "component": "Button",
+            "props": {
+              "variant": "ghost",
+              "size": "sm",
+              "fullWidth": false,
+              "text": "Reset password"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "signup-es",
+      "ok": true,
+      "valid": true,
+      "dropped": 0,
+      "warnings": [],
+      "missing": [],
+      "nodes": 3,
+      "ms": 5671,
+      "costUsd": 0.0006474400000000001,
+      "outputTokens": 1238,
+      "document": {
+        "title": "Registro de jugador",
+        "nodes": [
+          {
+            "id": "root",
+            "parent": null,
+            "component": "Stack",
+            "props": {
+              "direction": "vertical",
+              "gap": "xl",
+              "align": "stretch",
+              "justify": "start",
+              "wrap": false
+            }
+          },
+          {
+            "id": "heading",
+            "parent": "root",
+            "component": "Typography",
+            "props": {
+              "variant": "h1",
+              "color": "primary",
+              "text": "Únete a la comunidad de pádel"
+            }
+          },
+          {
+            "id": "register-form",
+            "parent": "root",
+            "component": "Form",
+            "props": {
+              "title": "Crear cuenta",
+              "description": "Reserva pistas en segundos. Solo tardas un minuto.",
+              "submitLabel": "Crear cuenta",
+              "fields": [
+                {
+                  "type": "input",
+                  "name": "nombre",
+                  "label": "Nombre completo",
+                  "required": true,
+                  "inputType": "text",
+                  "placeholder": "Lucía Fernández"
+                },
+                {
+                  "type": "input",
+                  "name": "email",
+                  "label": "Correo electrónico",
+                  "required": true,
+                  "inputType": "email",
+                  "placeholder": "lucia@ejemplo.com"
+                },
+                {
+                  "type": "input",
+                  "name": "telefono",
+                  "label": "Teléfono",
+                  "required": true,
+                  "inputType": "tel",
+                  "placeholder": "+34 600 123 456"
+                },
+                {
+                  "type": "select",
+                  "name": "nivel",
+                  "label": "Nivel de juego",
+                  "required": true,
+                  "options": [
+                    {
+                      "value": "principiante",
+                      "label": "Principiante"
+                    },
+                    {
+                      "value": "intermedio",
+                      "label": "Intermedio"
+                    },
+                    {
+                      "value": "avanzado",
+                      "label": "Avanzado"
+                    },
+                    {
+                      "value": "experto",
+                      "label": "Experto"
+                    }
+                  ]
+                },
+                {
+                  "type": "checkbox",
+                  "name": "condiciones",
+                  "label": "Acepto los términos de uso y la política de privacidad",
+                  "required": true
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "pricing",
+      "ok": true,
+      "valid": true,
+      "dropped": 0,
+      "warnings": [],
+      "missing": [],
+      "nodes": 32,
+      "ms": 5867,
+      "costUsd": 0.0009199400000000001,
+      "outputTokens": 1787,
+      "document": {
+        "title": "Pricing – Podcast hosting",
+        "nodes": [
+          {
+            "id": "root",
+            "parent": null,
+            "component": "Stack",
+            "props": {
+              "direction": "vertical",
+              "gap": "xl",
+              "align": "stretch",
+              "justify": "start",
+              "wrap": false
+            }
+          },
+          {
+            "id": "title",
+            "parent": "root",
+            "component": "Typography",
+            "props": {
+              "variant": "display",
+              "color": "primary",
+              "text": "Simple pricing for every podcast"
+            }
+          },
+          {
+            "id": "subtitle",
+            "parent": "root",
+            "component": "Typography",
+            "props": {
+              "variant": "bodyLg",
+              "color": "secondary",
+              "text": "Start free, upgrade when your audience grows. No hidden fees, cancel anytime."
+            }
+          },
+          {
+            "id": "plans",
+            "parent": "root",
+            "component": "Grid",
+            "props": {
+              "columns": "3",
+              "gap": "lg"
+            }
+          },
+          {
+            "id": "plan-starter",
+            "parent": "plans",
+            "component": "Card",
+            "props": {
+              "variant": "outlined"
+            }
+          },
+          {
+            "id": "starter-head",
+            "parent": "plan-starter",
+            "component": "CardHeader",
+            "props": {}
+          },
+          {
+            "id": "starter-name",
+            "parent": "starter-head",
+            "component": "Typography",
+            "props": {
+              "variant": "h2",
+              "color": "primary",
+              "text": "Starter"
+            }
+          },
+          {
+            "id": "starter-desc",
+            "parent": "starter-head",
+            "component": "Typography",
+            "props": {
+              "variant": "bodySm",
+              "color": "secondary",
+              "text": "For new shows finding their first listeners."
+            }
+          },
+          {
+            "id": "starter-body",
+            "parent": "plan-starter",
+            "component": "CardBody",
+            "props": {}
+          },
+          {
+            "id": "starter-price",
+            "parent": "starter-body",
+            "component": "Stat",
+            "props": {
+              "value": 0,
+              "decimals": "0",
+              "prefix": "$",
+              "suffix": null,
+              "label": "per month",
+              "delta": null,
+              "trend": null
+            }
+          },
+          {
+            "id": "starter-list",
+            "parent": "starter-body",
+            "component": "Typography",
+            "props": {
+              "variant": "body",
+              "color": "secondary",
+              "text": "Up to 5 hours of storage\n1 podcast feed\nBasic download analytics\nCommunity support"
+            }
+          },
+          {
+            "id": "starter-foot",
+            "parent": "plan-starter",
+            "component": "CardFooter",
+            "props": {
+              "divider": true
+            }
+          },
+          {
+            "id": "starter-btn",
+            "parent": "starter-foot",
+            "component": "Button",
+            "props": {
+              "variant": "secondary",
+              "size": "md",
+              "fullWidth": true,
+              "text": "Start for free"
+            }
+          },
+          {
+            "id": "plan-pro",
+            "parent": "plans",
+            "component": "Card",
+            "props": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "pro-head",
+            "parent": "plan-pro",
+            "component": "CardHeader",
+            "props": {}
+          },
+          {
+            "id": "pro-badge",
+            "parent": "pro-head",
+            "component": "Badge",
+            "props": {
+              "label": "Most popular",
+              "variant": "primary",
+              "dot": false
+            }
+          },
+          {
+            "id": "pro-name",
+            "parent": "pro-head",
+            "component": "Typography",
+            "props": {
+              "variant": "h2",
+              "color": "primary",
+              "text": "Growth"
+            }
+          },
+          {
+            "id": "pro-desc",
+            "parent": "pro-head",
+            "component": "Typography",
+            "props": {
+              "variant": "bodySm",
+              "color": "secondary",
+              "text": "For shows with a growing, engaged audience."
+            }
+          },
+          {
+            "id": "pro-body",
+            "parent": "plan-pro",
+            "component": "CardBody",
+            "props": {}
+          },
+          {
+            "id": "pro-price",
+            "parent": "pro-body",
+            "component": "Stat",
+            "props": {
+              "value": 19,
+              "decimals": "0",
+              "prefix": "$",
+              "suffix": null,
+              "label": "per month",
+              "delta": null,
+              "trend": null
+            }
+          },
+          {
+            "id": "pro-list",
+            "parent": "pro-body",
+            "component": "Typography",
+            "props": {
+              "variant": "body",
+              "color": "secondary",
+              "text": "Unlimited storage\n5 podcast feeds\nAdvanced analytics by episode\nDynamic ad insertion\nPriority email support"
+            }
+          },
+          {
+            "id": "pro-foot",
+            "parent": "plan-pro",
+            "component": "CardFooter",
+            "props": {
+              "divider": true
+            }
+          },
+          {
+            "id": "pro-btn",
+            "parent": "pro-foot",
+            "component": "Button",
+            "props": {
+              "variant": "primary",
+              "size": "md",
+              "fullWidth": true,
+              "text": "Choose Growth"
+            }
+          },
+          {
+            "id": "plan-studio",
+            "parent": "plans",
+            "component": "Card",
+            "props": {
+              "variant": "outlined"
+            }
+          },
+          {
+            "id": "studio-head",
+            "parent": "plan-studio",
+            "component": "CardHeader",
+            "props": {}
+          },
+          {
+            "id": "studio-name",
+            "parent": "studio-head",
+            "component": "Typography",
+            "props": {
+              "variant": "h2",
+              "color": "primary",
+              "text": "Studio"
+            }
+          },
+          {
+            "id": "studio-desc",
+            "parent": "studio-head",
+            "component": "Typography",
+            "props": {
+              "variant": "bodySm",
+              "color": "secondary",
+              "text": "For networks and teams producing many shows."
+            }
+          },
+          {
+            "id": "studio-body",
+            "parent": "plan-studio",
+            "component": "CardBody",
+            "props": {}
+          },
+          {
+            "id": "studio-price",
+            "parent": "studio-body",
+            "component": "Stat",
+            "props": {
+              "value": 49,
+              "decimals": "0",
+              "prefix": "$",
+              "suffix": null,
+              "label": "per month",
+              "delta": null,
+              "trend": null
+            }
+          },
+          {
+            "id": "studio-list",
+            "parent": "studio-body",
+            "component": "Typography",
+            "props": {
+              "variant": "body",
+              "color": "secondary",
+              "text": "Everything in Growth\nUnlimited podcast feeds\nTeam seats up to 10\nCustom RSS domain\nDedicated account manager"
+            }
+          },
+          {
+            "id": "studio-foot",
+            "parent": "plan-studio",
+            "component": "CardFooter",
+            "props": {
+              "divider": true
+            }
+          },
+          {
+            "id": "studio-btn",
+            "parent": "studio-foot",
+            "component": "Button",
+            "props": {
+              "variant": "secondary",
+              "size": "md",
+              "fullWidth": true,
+              "text": "Choose Studio"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "dashboard",
+      "ok": true,
+      "valid": true,
+      "dropped": 0,
+      "warnings": [],
+      "missing": [],
+      "nodes": 21,
+      "ms": 8448,
+      "costUsd": 0.00115174,
+      "outputTokens": 2249,
+      "document": {
+        "title": "Shop overview",
+        "nodes": [
+          {
+            "id": "root",
+            "parent": null,
+            "component": "Stack",
+            "props": {
+              "direction": "vertical",
+              "gap": "xl",
+              "align": "stretch",
+              "justify": "start",
+              "wrap": false
+            }
+          },
+          {
+            "id": "title",
+            "parent": "root",
+            "component": "Typography",
+            "props": {
+              "variant": "display",
+              "color": "primary",
+              "text": "Shop overview"
+            }
+          },
+          {
+            "id": "kpi-grid",
+            "parent": "root",
+            "component": "Grid",
+            "props": {
+              "columns": "4",
+              "gap": "md"
+            }
+          },
+          {
+            "id": "kpi-revenue",
+            "parent": "kpi-grid",
+            "component": "Card",
+            "props": {
+              "variant": "outlined"
+            }
+          },
+          {
+            "id": "kpi-revenue-body",
+            "parent": "kpi-revenue",
+            "component": "CardBody",
+            "props": {}
+          },
+          {
+            "id": "kpi-revenue-stat",
+            "parent": "kpi-revenue-body",
+            "component": "Stat",
+            "props": {
+              "value": 48216,
+              "decimals": "0",
+              "prefix": "$",
+              "suffix": null,
+              "label": "Revenue, last 30 days",
+              "delta": "+12.4%",
+              "trend": "up"
+            }
+          },
+          {
+            "id": "kpi-orders",
+            "parent": "kpi-grid",
+            "component": "Card",
+            "props": {
+              "variant": "outlined"
+            }
+          },
+          {
+            "id": "kpi-orders-body",
+            "parent": "kpi-orders",
+            "component": "CardBody",
+            "props": {}
+          },
+          {
+            "id": "kpi-orders-stat",
+            "parent": "kpi-orders-body",
+            "component": "Stat",
+            "props": {
+              "value": 1284,
+              "decimals": "0",
+              "prefix": null,
+              "suffix": null,
+              "label": "Orders placed",
+              "delta": "+8.2%",
+              "trend": "up"
+            }
+          },
+          {
+            "id": "kpi-aov",
+            "parent": "kpi-grid",
+            "component": "Card",
+            "props": {
+              "variant": "outlined"
+            }
+          },
+          {
+            "id": "kpi-aov-body",
+            "parent": "kpi-aov",
+            "component": "CardBody",
+            "props": {}
+          },
+          {
+            "id": "kpi-aov-stat",
+            "parent": "kpi-aov-body",
+            "component": "Stat",
+            "props": {
+              "value": 37.55,
+              "decimals": "2",
+              "prefix": "$",
+              "suffix": null,
+              "label": "Average order value",
+              "delta": "+1.1%",
+              "trend": "up"
+            }
+          },
+          {
+            "id": "kpi-conv",
+            "parent": "kpi-grid",
+            "component": "Card",
+            "props": {
+              "variant": "outlined"
+            }
+          },
+          {
+            "id": "kpi-conv-body",
+            "parent": "kpi-conv",
+            "component": "CardBody",
+            "props": {}
+          },
+          {
+            "id": "kpi-conv-stat",
+            "parent": "kpi-conv-body",
+            "component": "Stat",
+            "props": {
+              "value": 3.4,
+              "decimals": "1",
+              "prefix": null,
+              "suffix": "%",
+              "label": "Conversion rate",
+              "delta": "-0.3 pts",
+              "trend": "down"
+            }
+          },
+          {
+            "id": "orders-card",
+            "parent": "root",
+            "component": "Card",
+            "props": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "orders-header",
+            "parent": "orders-card",
+            "component": "CardHeader",
+            "props": {}
+          },
+          {
+            "id": "orders-title",
+            "parent": "orders-header",
+            "component": "Typography",
+            "props": {
+              "variant": "h2",
+              "color": "primary",
+              "text": "Latest orders"
+            }
+          },
+          {
+            "id": "orders-subtitle",
+            "parent": "orders-header",
+            "component": "Typography",
+            "props": {
+              "variant": "bodySm",
+              "color": "secondary",
+              "text": "The five most recent orders across all channels"
+            }
+          },
+          {
+            "id": "orders-body",
+            "parent": "orders-card",
+            "component": "CardBody",
+            "props": {}
+          },
+          {
+            "id": "orders-table",
+            "parent": "orders-body",
+            "component": "DataTable",
+            "props": {
+              "columns": [
+                {
+                  "key": "order",
+                  "header": "Order",
+                  "align": "left"
+                },
+                {
+                  "key": "customer",
+                  "header": "Customer",
+                  "align": "left"
+                },
+                {
+                  "key": "date",
+                  "header": "Date",
+                  "align": "left"
+                },
+                {
+                  "key": "status",
+                  "header": "Status",
+                  "align": "left"
+                },
+                {
+                  "key": "total",
+                  "header": "Total",
+                  "align": "right"
+                }
+              ],
+              "rows": [
+                {
+                  "cells": [
+                    "#10482",
+                    "Maya Lindqvist",
+                    "14 May 2024",
+                    "Shipped",
+                    "$128.00"
+                  ]
+                },
+                {
+                  "cells": [
+                    "#10481",
+                    "Daniel Okafor",
+                    "14 May 2024",
+                    "Paid",
+                    "$64.50"
+                  ]
+                },
+                {
+                  "cells": [
+                    "#10480",
+                    "Sofia Rossi",
+                    "13 May 2024",
+                    "Processing",
+                    "$212.90"
+                  ]
+                },
+                {
+                  "cells": [
+                    "#10479",
+                    "Liam Patel",
+                    "13 May 2024",
+                    "Shipped",
+                    "$39.99"
+                  ]
+                },
+                {
+                  "cells": [
+                    "#10478",
+                    "Chloe Dubois",
+                    "12 May 2024",
+                    "Refunded",
+                    "$87.25"
+                  ]
+                }
+              ],
+              "striped": true,
+              "dense": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "team-table",
+      "ok": true,
+      "valid": true,
+      "dropped": 0,
+      "warnings": [],
+      "missing": [],
+      "nodes": 10,
+      "ms": 5709,
+      "costUsd": 0.0006985400000000001,
+      "outputTokens": 1343,
+      "document": {
+        "title": "Team members",
+        "nodes": [
+          {
+            "id": "root",
+            "parent": null,
+            "component": "Stack",
+            "props": {
+              "direction": "vertical",
+              "gap": "xl",
+              "align": "stretch",
+              "justify": "start",
+              "wrap": false
+            }
+          },
+          {
+            "id": "title",
+            "parent": "root",
+            "component": "Typography",
+            "props": {
+              "variant": "h1",
+              "color": "primary",
+              "text": "Team members"
+            }
+          },
+          {
+            "id": "toolbar",
+            "parent": "root",
+            "component": "Stack",
+            "props": {
+              "direction": "horizontal",
+              "gap": "md",
+              "align": "end",
+              "justify": "between",
+              "wrap": true
+            }
+          },
+          {
+            "id": "search",
+            "parent": "toolbar",
+            "component": "Input",
+            "props": {
+              "label": "Search members",
+              "inputType": "search",
+              "placeholder": "Search by name or email",
+              "hint": null,
+              "required": false
+            }
+          },
+          {
+            "id": "invite",
+            "parent": "toolbar",
+            "component": "Button",
+            "props": {
+              "variant": "primary",
+              "size": "md",
+              "fullWidth": false,
+              "text": "Invite member"
+            }
+          },
+          {
+            "id": "members-card",
+            "parent": "root",
+            "component": "Card",
+            "props": {
+              "variant": "outlined"
+            }
+          },
+          {
+            "id": "card-header",
+            "parent": "members-card",
+            "component": "CardHeader",
+            "props": {}
+          },
+          {
+            "id": "section-title",
+            "parent": "card-header",
+            "component": "Typography",
+            "props": {
+              "variant": "h2",
+              "color": "primary",
+              "text": "All members"
+            }
+          },
+          {
+            "id": "card-body",
+            "parent": "members-card",
+            "component": "CardBody",
+            "props": {}
+          },
+          {
+            "id": "table",
+            "parent": "card-body",
+            "component": "DataTable",
+            "props": {
+              "columns": [
+                {
+                  "key": "name",
+                  "header": "Name",
+                  "align": "left"
+                },
+                {
+                  "key": "email",
+                  "header": "Email",
+                  "align": "left"
+                },
+                {
+                  "key": "role",
+                  "header": "Role",
+                  "align": "left"
+                },
+                {
+                  "key": "status",
+                  "header": "Status",
+                  "align": "left"
+                },
+                {
+                  "key": "joined",
+                  "header": "Joined",
+                  "align": "right"
+                }
+              ],
+              "rows": [
+                {
+                  "cells": [
+                    "Amara Okafor",
+                    "amara.okafor@northwind.io",
+                    "Admin",
+                    "Active",
+                    "12 Jan 2024"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Lukas Brandt",
+                    "lukas.brandt@northwind.io",
+                    "Editor",
+                    "Active",
+                    "03 Mar 2024"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Sofia Mendes",
+                    "sofia.mendes@northwind.io",
+                    "Viewer",
+                    "Invited",
+                    "18 Jun 2024"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Kenji Watanabe",
+                    "kenji.watanabe@northwind.io",
+                    "Editor",
+                    "Active",
+                    "27 Aug 2024"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Priya Raman",
+                    "priya.raman@northwind.io",
+                    "Viewer",
+                    "Suspended",
+                    "05 Oct 2024"
+                  ]
+                }
+              ],
+              "striped": true,
+              "dense": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "settings",
+      "ok": true,
+      "valid": true,
+      "dropped": 0,
+      "warnings": [],
+      "missing": [],
+      "nodes": 20,
+      "ms": 8768,
+      "costUsd": 0.0010591399999999999,
+      "outputTokens": 2064,
+      "document": {
+        "title": "Notification preferences",
+        "nodes": [
+          {
+            "id": "root",
+            "parent": null,
+            "component": "Stack",
+            "props": {
+              "direction": "vertical",
+              "gap": "xl",
+              "align": "stretch",
+              "justify": "start",
+              "wrap": false
+            }
+          },
+          {
+            "id": "title",
+            "parent": "root",
+            "component": "Typography",
+            "props": {
+              "variant": "h1",
+              "color": "primary",
+              "text": "Notification preferences"
+            }
+          },
+          {
+            "id": "intro",
+            "parent": "root",
+            "component": "Typography",
+            "props": {
+              "variant": "bodyLg",
+              "color": "secondary",
+              "text": "Choose which events send you a notification, and the channel they arrive on."
+            }
+          },
+          {
+            "id": "card-events",
+            "parent": "root",
+            "component": "Card",
+            "props": {
+              "variant": "outlined"
+            }
+          },
+          {
+            "id": "card-events-header",
+            "parent": "card-events",
+            "component": "CardHeader",
+            "props": {}
+          },
+          {
+            "id": "events-title",
+            "parent": "card-events-header",
+            "component": "Typography",
+            "props": {
+              "variant": "h2",
+              "color": "primary",
+              "text": "Events"
+            }
+          },
+          {
+            "id": "card-events-body",
+            "parent": "card-events",
+            "component": "CardBody",
+            "props": {}
+          },
+          {
+            "id": "events-stack",
+            "parent": "card-events-body",
+            "component": "Stack",
+            "props": {
+              "direction": "vertical",
+              "gap": "md",
+              "align": "start",
+              "justify": "start",
+              "wrap": false
+            }
+          },
+          {
+            "id": "cb-invites",
+            "parent": "events-stack",
+            "component": "Checkbox",
+            "props": {
+              "label": "New event invitations",
+              "checked": true
+            }
+          },
+          {
+            "id": "cb-updates",
+            "parent": "events-stack",
+            "component": "Checkbox",
+            "props": {
+              "label": "Changes to time or location",
+              "checked": true
+            }
+          },
+          {
+            "id": "cb-reminders",
+            "parent": "events-stack",
+            "component": "Checkbox",
+            "props": {
+              "label": "Event reminders",
+              "checked": true
+            }
+          },
+          {
+            "id": "cb-cancelled",
+            "parent": "events-stack",
+            "component": "Checkbox",
+            "props": {
+              "label": "Cancelled events",
+              "checked": true
+            }
+          },
+          {
+            "id": "cb-agenda",
+            "parent": "events-stack",
+            "component": "Checkbox",
+            "props": {
+              "label": "Daily agenda summary at 7:00",
+              "checked": false
+            }
+          },
+          {
+            "id": "cb-shared",
+            "parent": "events-stack",
+            "component": "Checkbox",
+            "props": {
+              "label": "Activity on shared calendars",
+              "checked": false
+            }
+          },
+          {
+            "id": "card-channel",
+            "parent": "root",
+            "component": "Card",
+            "props": {
+              "variant": "outlined"
+            }
+          },
+          {
+            "id": "card-channel-header",
+            "parent": "card-channel",
+            "component": "CardHeader",
+            "props": {}
+          },
+          {
+            "id": "channel-title",
+            "parent": "card-channel-header",
+            "component": "Typography",
+            "props": {
+              "variant": "h2",
+              "color": "primary",
+              "text": "Delivery channel"
+            }
+          },
+          {
+            "id": "card-channel-body",
+            "parent": "card-channel",
+            "component": "CardBody",
+            "props": {}
+          },
+          {
+            "id": "channel-radio",
+            "parent": "card-channel-body",
+            "component": "RadioGroup",
+            "props": {
+              "name": "channel",
+              "label": "Send notifications by",
+              "options": [
+                {
+                  "value": "push",
+                  "label": "Push notification"
+                },
+                {
+                  "value": "email",
+                  "label": "Email"
+                },
+                {
+                  "value": "sms",
+                  "label": "SMS"
+                }
+              ],
+              "direction": "vertical"
+            }
+          },
+          {
+            "id": "save-button",
+            "parent": "root",
+            "component": "Button",
+            "props": {
+              "variant": "primary",
+              "size": "lg",
+              "fullWidth": false,
+              "text": "Save preferences"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "profile",
+      "ok": true,
+      "valid": true,
+      "dropped": 0,
+      "warnings": [],
+      "missing": [],
+      "nodes": 16,
+      "ms": 2945,
+      "costUsd": 0.00043853999999999996,
+      "outputTokens": 824,
+      "document": {
+        "title": "User profile",
+        "nodes": [
+          {
+            "id": "root",
+            "parent": null,
+            "component": "Stack",
+            "props": {
+              "direction": "vertical",
+              "gap": "lg",
+              "align": "start",
+              "justify": "start",
+              "wrap": false
+            }
+          },
+          {
+            "id": "title",
+            "parent": "root",
+            "component": "Typography",
+            "props": {
+              "variant": "h1",
+              "color": "primary",
+              "text": "Profile"
+            }
+          },
+          {
+            "id": "card",
+            "parent": "root",
+            "component": "Card",
+            "props": {
+              "variant": "outlined"
+            }
+          },
+          {
+            "id": "header",
+            "parent": "card",
+            "component": "CardHeader",
+            "props": {}
+          },
+          {
+            "id": "identity",
+            "parent": "header",
+            "component": "Stack",
+            "props": {
+              "direction": "horizontal",
+              "gap": "md",
+              "align": "center",
+              "justify": "start",
+              "wrap": false
+            }
+          },
+          {
+            "id": "avatar",
+            "parent": "identity",
+            "component": "Avatar",
+            "props": {
+              "initials": "AM",
+              "size": "lg",
+              "status": "online"
+            }
+          },
+          {
+            "id": "identity-text",
+            "parent": "identity",
+            "component": "Stack",
+            "props": {
+              "direction": "vertical",
+              "gap": "none",
+              "align": "start",
+              "justify": "start",
+              "wrap": false
+            }
+          },
+          {
+            "id": "name",
+            "parent": "identity-text",
+            "component": "Typography",
+            "props": {
+              "variant": "h2",
+              "color": "primary",
+              "text": "Amara Mensah"
+            }
+          },
+          {
+            "id": "role",
+            "parent": "identity-text",
+            "component": "Typography",
+            "props": {
+              "variant": "body",
+              "color": "secondary",
+              "text": "Senior Product Designer"
+            }
+          },
+          {
+            "id": "location-badge",
+            "parent": "identity-text",
+            "component": "Badge",
+            "props": {
+              "label": "Lisbon, Portugal",
+              "variant": "outline",
+              "dot": true
+            }
+          },
+          {
+            "id": "body",
+            "parent": "card",
+            "component": "CardBody",
+            "props": {}
+          },
+          {
+            "id": "bio",
+            "parent": "body",
+            "component": "Typography",
+            "props": {
+              "variant": "bodySm",
+              "color": "secondary",
+              "text": "Leads the design system team at Northwind Labs, focused on accessible interfaces for logistics software."
+            }
+          },
+          {
+            "id": "footer",
+            "parent": "card",
+            "component": "CardFooter",
+            "props": {
+              "divider": true
+            }
+          },
+          {
+            "id": "actions",
+            "parent": "footer",
+            "component": "Stack",
+            "props": {
+              "direction": "horizontal",
+              "gap": "sm",
+              "align": "center",
+              "justify": "end",
+              "wrap": false
+            }
+          },
+          {
+            "id": "message-btn",
+            "parent": "actions",
+            "component": "Button",
+            "props": {
+              "variant": "secondary",
+              "size": "md",
+              "fullWidth": false,
+              "text": "Send message"
+            }
+          },
+          {
+            "id": "follow-btn",
+            "parent": "actions",
+            "component": "Button",
+            "props": {
+              "variant": "primary",
+              "size": "md",
+              "fullWidth": false,
+              "text": "Follow"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "empty-state",
+      "ok": true,
+      "valid": true,
+      "dropped": 0,
+      "warnings": [],
+      "missing": [],
+      "nodes": 13,
+      "ms": 5618,
+      "costUsd": 0.00070784,
+      "outputTokens": 1363,
+      "document": {
+        "title": "Projects: empty state",
+        "nodes": [
+          {
+            "id": "root",
+            "parent": null,
+            "component": "Stack",
+            "props": {
+              "direction": "vertical",
+              "gap": "xl",
+              "align": "stretch",
+              "justify": "start",
+              "wrap": false
+            }
+          },
+          {
+            "id": "title",
+            "parent": "root",
+            "component": "Typography",
+            "props": {
+              "variant": "h1",
+              "color": "primary",
+              "text": "Projects"
+            }
+          },
+          {
+            "id": "card",
+            "parent": "root",
+            "component": "Card",
+            "props": {
+              "variant": "outlined"
+            }
+          },
+          {
+            "id": "card-body",
+            "parent": "card",
+            "component": "CardBody",
+            "props": {}
+          },
+          {
+            "id": "content",
+            "parent": "card-body",
+            "component": "Stack",
+            "props": {
+              "direction": "vertical",
+              "gap": "md",
+              "align": "center",
+              "justify": "center",
+              "wrap": false
+            }
+          },
+          {
+            "id": "badge",
+            "parent": "content",
+            "component": "Badge",
+            "props": {
+              "label": "Getting started",
+              "variant": "outline",
+              "dot": false
+            }
+          },
+          {
+            "id": "empty-heading",
+            "parent": "content",
+            "component": "Typography",
+            "props": {
+              "variant": "h2",
+              "color": "primary",
+              "text": "No projects yet"
+            }
+          },
+          {
+            "id": "empty-text",
+            "parent": "content",
+            "component": "Typography",
+            "props": {
+              "variant": "body",
+              "color": "secondary",
+              "text": "Projects group your tasks, files and team conversations in one place. Create your first project to get started."
+            }
+          },
+          {
+            "id": "actions",
+            "parent": "content",
+            "component": "Stack",
+            "props": {
+              "direction": "horizontal",
+              "gap": "md",
+              "align": "center",
+              "justify": "center",
+              "wrap": true
+            }
+          },
+          {
+            "id": "create-btn",
+            "parent": "actions",
+            "component": "Button",
+            "props": {
+              "variant": "primary",
+              "size": "md",
+              "fullWidth": false,
+              "text": "Create project"
+            }
+          },
+          {
+            "id": "import-btn",
+            "parent": "actions",
+            "component": "Button",
+            "props": {
+              "variant": "secondary",
+              "size": "md",
+              "fullWidth": false,
+              "text": "Import from GitHub"
+            }
+          },
+          {
+            "id": "card-footer",
+            "parent": "card",
+            "component": "CardFooter",
+            "props": {
+              "divider": true
+            }
+          },
+          {
+            "id": "template-hint",
+            "parent": "card-footer",
+            "component": "Typography",
+            "props": {
+              "variant": "caption",
+              "color": "secondary",
+              "text": "Not sure where to start? Browse 12 starter templates."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "checkout",
+      "ok": true,
+      "valid": true,
+      "dropped": 0,
+      "warnings": [],
+      "missing": [],
+      "nodes": 16,
+      "ms": 9874,
+      "costUsd": 0.0012831399999999999,
+      "outputTokens": 2514,
+      "document": {
+        "title": "Checkout",
+        "nodes": [
+          {
+            "id": "root",
+            "parent": null,
+            "component": "Stack",
+            "props": {
+              "direction": "vertical",
+              "gap": "xl",
+              "align": "stretch",
+              "justify": "start",
+              "wrap": false
+            }
+          },
+          {
+            "id": "title",
+            "parent": "root",
+            "component": "Typography",
+            "props": {
+              "variant": "h1",
+              "color": "primary",
+              "text": "Checkout"
+            }
+          },
+          {
+            "id": "grid",
+            "parent": "root",
+            "component": "Grid",
+            "props": {
+              "columns": "2",
+              "gap": "lg"
+            }
+          },
+          {
+            "id": "summaryCard",
+            "parent": "grid",
+            "component": "Card",
+            "props": {
+              "variant": "outlined"
+            }
+          },
+          {
+            "id": "summaryHeader",
+            "parent": "summaryCard",
+            "component": "CardHeader",
+            "props": {}
+          },
+          {
+            "id": "summaryTitle",
+            "parent": "summaryHeader",
+            "component": "Typography",
+            "props": {
+              "variant": "h2",
+              "color": "primary",
+              "text": "Order summary"
+            }
+          },
+          {
+            "id": "summaryBody",
+            "parent": "summaryCard",
+            "component": "CardBody",
+            "props": {}
+          },
+          {
+            "id": "table",
+            "parent": "summaryBody",
+            "component": "DataTable",
+            "props": {
+              "columns": [
+                {
+                  "key": "item",
+                  "header": "Item",
+                  "align": "left"
+                },
+                {
+                  "key": "qty",
+                  "header": "Qty",
+                  "align": "center"
+                },
+                {
+                  "key": "price",
+                  "header": "Price",
+                  "align": "right"
+                }
+              ],
+              "rows": [
+                {
+                  "cells": [
+                    "Merino crew sweater, Navy M",
+                    "1",
+                    "€118.00"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Leather card wallet, Black",
+                    "2",
+                    "€96.00"
+                  ]
+                },
+                {
+                  "cells": [
+                    "Canvas tote, Natural",
+                    "1",
+                    "€42.00"
+                  ]
+                }
+              ],
+              "striped": false,
+              "dense": false
+            }
+          },
+          {
+            "id": "total",
+            "parent": "summaryBody",
+            "component": "Stat",
+            "props": {
+              "value": 256,
+              "decimals": "2",
+              "prefix": "€",
+              "suffix": null,
+              "label": "Total due",
+              "delta": null,
+              "trend": null
+            }
+          },
+          {
+            "id": "summaryFooter",
+            "parent": "summaryCard",
+            "component": "CardFooter",
+            "props": {
+              "divider": true
+            }
+          },
+          {
+            "id": "editBtn",
+            "parent": "summaryFooter",
+            "component": "Button",
+            "props": {
+              "variant": "ghost",
+              "size": "md",
+              "fullWidth": false,
+              "text": "Edit cart"
+            }
+          },
+          {
+            "id": "paymentCard",
+            "parent": "grid",
+            "component": "Card",
+            "props": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "paymentHeader",
+            "parent": "paymentCard",
+            "component": "CardHeader",
+            "props": {}
+          },
+          {
+            "id": "paymentTitle",
+            "parent": "paymentHeader",
+            "component": "Typography",
+            "props": {
+              "variant": "h2",
+              "color": "primary",
+              "text": "Payment details"
+            }
+          },
+          {
+            "id": "paymentBody",
+            "parent": "paymentCard",
+            "component": "CardBody",
+            "props": {}
+          },
+          {
+            "id": "form",
+            "parent": "paymentBody",
+            "component": "Form",
+            "props": {
+              "title": null,
+              "description": "Your payment is encrypted and processed securely.",
+              "submitLabel": "Pay €256.00",
+              "fields": [
+                {
+                  "type": "input",
+                  "name": "fullName",
+                  "label": "Full name",
+                  "required": true,
+                  "inputType": "text",
+                  "placeholder": "Maya Lindqvist"
+                },
+                {
+                  "type": "input",
+                  "name": "email",
+                  "label": "Email",
+                  "required": true,
+                  "inputType": "email",
+                  "placeholder": "maya@example.com"
+                },
+                {
+                  "type": "input",
+                  "name": "cardNumber",
+                  "label": "Card number",
+                  "required": true,
+                  "inputType": "text",
+                  "placeholder": "4242 4242 4242 4242"
+                },
+                {
+                  "type": "input",
+                  "name": "expiry",
+                  "label": "Expiry date",
+                  "required": true,
+                  "inputType": "text",
+                  "placeholder": "MM / YY"
+                },
+                {
+                  "type": "input",
+                  "name": "cvc",
+                  "label": "Security code",
+                  "required": true,
+                  "inputType": "number",
+                  "placeholder": "123"
+                },
+                {
+                  "type": "select",
+                  "name": "country",
+                  "label": "Country",
+                  "required": true,
+                  "options": [
+                    {
+                      "value": "de",
+                      "label": "Germany"
+                    },
+                    {
+                      "value": "fr",
+                      "label": "France"
+                    },
+                    {
+                      "value": "nl",
+                      "label": "Netherlands"
+                    },
+                    {
+                      "value": "se",
+                      "label": "Sweden"
+                    }
+                  ]
+                },
+                {
+                  "type": "checkbox",
+                  "name": "saveDetails",
+                  "label": "Save my details for next time",
+                  "required": false
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "error-page",
+      "ok": true,
+      "valid": true,
+      "dropped": 0,
+      "warnings": [],
+      "missing": [],
+      "nodes": 18,
+      "ms": 7862,
+      "costUsd": 0.00099334,
+      "outputTokens": 1933,
+      "document": {
+        "title": "Payment failed",
+        "nodes": [
+          {
+            "id": "root",
+            "parent": null,
+            "component": "Stack",
+            "props": {
+              "direction": "vertical",
+              "gap": "xl",
+              "align": "stretch",
+              "justify": "start",
+              "wrap": false
+            }
+          },
+          {
+            "id": "title",
+            "parent": "root",
+            "component": "Typography",
+            "props": {
+              "variant": "h1",
+              "color": "primary",
+              "text": "Your payment didn't go through"
+            }
+          },
+          {
+            "id": "intro",
+            "parent": "root",
+            "component": "Typography",
+            "props": {
+              "variant": "bodyLg",
+              "color": "secondary",
+              "text": "We couldn't process your payment for order #48213. You haven't been charged."
+            }
+          },
+          {
+            "id": "alert",
+            "parent": "root",
+            "component": "Alert",
+            "props": {
+              "variant": "error",
+              "title": "Payment declined",
+              "text": "Your bank declined the transaction. This usually happens for security reasons and is quick to fix."
+            }
+          },
+          {
+            "id": "card",
+            "parent": "root",
+            "component": "Card",
+            "props": {
+              "variant": "outlined"
+            }
+          },
+          {
+            "id": "cardHeader",
+            "parent": "card",
+            "component": "CardHeader",
+            "props": {}
+          },
+          {
+            "id": "sectionTitle",
+            "parent": "cardHeader",
+            "component": "Typography",
+            "props": {
+              "variant": "h2",
+              "color": "primary",
+              "text": "What to do next"
+            }
+          },
+          {
+            "id": "cardBody",
+            "parent": "card",
+            "component": "CardBody",
+            "props": {}
+          },
+          {
+            "id": "bodyStack",
+            "parent": "cardBody",
+            "component": "Stack",
+            "props": {
+              "direction": "vertical",
+              "gap": "md",
+              "align": "start",
+              "justify": "start",
+              "wrap": false
+            }
+          },
+          {
+            "id": "amount",
+            "parent": "bodyStack",
+            "component": "Stat",
+            "props": {
+              "value": 84.5,
+              "decimals": "2",
+              "prefix": "$",
+              "suffix": null,
+              "label": "Amount still due",
+              "delta": null,
+              "trend": null
+            }
+          },
+          {
+            "id": "step1",
+            "parent": "bodyStack",
+            "component": "Typography",
+            "props": {
+              "variant": "body",
+              "color": "secondary",
+              "text": "Check that your card number, expiry date and security code are entered correctly."
+            }
+          },
+          {
+            "id": "step2",
+            "parent": "bodyStack",
+            "component": "Typography",
+            "props": {
+              "variant": "body",
+              "color": "secondary",
+              "text": "Contact your bank to confirm it allows online purchases from Northwind Outfitters."
+            }
+          },
+          {
+            "id": "step3",
+            "parent": "bodyStack",
+            "component": "Typography",
+            "props": {
+              "variant": "body",
+              "color": "secondary",
+              "text": "Or try another payment method, such as a different card or PayPal."
+            }
+          },
+          {
+            "id": "cardFooter",
+            "parent": "card",
+            "component": "CardFooter",
+            "props": {
+              "divider": true
+            }
+          },
+          {
+            "id": "actions",
+            "parent": "cardFooter",
+            "component": "Stack",
+            "props": {
+              "direction": "horizontal",
+              "gap": "md",
+              "align": "center",
+              "justify": "start",
+              "wrap": true
+            }
+          },
+          {
+            "id": "retry",
+            "parent": "actions",
+            "component": "Button",
+            "props": {
+              "variant": "primary",
+              "size": "md",
+              "fullWidth": false,
+              "text": "Try payment again"
+            }
+          },
+          {
+            "id": "otherCard",
+            "parent": "actions",
+            "component": "Button",
+            "props": {
+              "variant": "secondary",
+              "size": "md",
+              "fullWidth": false,
+              "text": "Use another card"
+            }
+          },
+          {
+            "id": "support",
+            "parent": "actions",
+            "component": "Button",
+            "props": {
+              "variant": "ghost",
+              "size": "md",
+              "fullWidth": false,
+              "text": "Contact support"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "contact-ca",
+      "ok": true,
+      "valid": true,
+      "dropped": 0,
+      "warnings": [],
+      "missing": [],
+      "nodes": 8,
+      "ms": 6267,
+      "costUsd": 0.00073244,
+      "outputTokens": 1409,
+      "document": {
+        "title": "Contacte - Estudi d'arquitectura",
+        "nodes": [
+          {
+            "id": "root",
+            "parent": null,
+            "component": "Stack",
+            "props": {
+              "direction": "vertical",
+              "gap": "xl",
+              "align": "stretch",
+              "justify": "start",
+              "wrap": false
+            }
+          },
+          {
+            "id": "intro",
+            "parent": "root",
+            "component": "Stack",
+            "props": {
+              "direction": "vertical",
+              "gap": "sm",
+              "align": "start",
+              "justify": "start",
+              "wrap": false
+            }
+          },
+          {
+            "id": "overline",
+            "parent": "intro",
+            "component": "Typography",
+            "props": {
+              "variant": "overline",
+              "color": "accent",
+              "text": "Contacte"
+            }
+          },
+          {
+            "id": "title",
+            "parent": "intro",
+            "component": "Typography",
+            "props": {
+              "variant": "h1",
+              "color": "primary",
+              "text": "Expliqueu-nos el vostre projecte"
+            }
+          },
+          {
+            "id": "lead",
+            "parent": "intro",
+            "component": "Typography",
+            "props": {
+              "variant": "bodyLg",
+              "color": "secondary",
+              "text": "Responem totes les consultes en un termini de 48 hores laborables. Una arquitecta de l'equip es posarà en contacte amb vosaltres per concertar una primera reunió."
+            }
+          },
+          {
+            "id": "card",
+            "parent": "root",
+            "component": "Card",
+            "props": {
+              "variant": "outlined"
+            }
+          },
+          {
+            "id": "card-body",
+            "parent": "card",
+            "component": "CardBody",
+            "props": {}
+          },
+          {
+            "id": "form",
+            "parent": "card-body",
+            "component": "Form",
+            "props": {
+              "title": null,
+              "description": null,
+              "submitLabel": "Enviar consulta",
+              "fields": [
+                {
+                  "type": "input",
+                  "name": "nom",
+                  "label": "Nom i cognoms",
+                  "required": true,
+                  "inputType": "text",
+                  "placeholder": "Marta Puig Serra"
+                },
+                {
+                  "type": "input",
+                  "name": "email",
+                  "label": "Correu electrònic",
+                  "required": true,
+                  "inputType": "email",
+                  "placeholder": "marta@exemple.cat"
+                },
+                {
+                  "type": "input",
+                  "name": "telefon",
+                  "label": "Telèfon",
+                  "required": false,
+                  "inputType": "tel",
+                  "placeholder": "+34 600 123 456"
+                },
+                {
+                  "type": "select",
+                  "name": "motiu",
+                  "label": "Motiu de la consulta",
+                  "required": true,
+                  "options": [
+                    {
+                      "value": "obra-nova",
+                      "label": "Projecte d'obra nova"
+                    },
+                    {
+                      "value": "reforma",
+                      "label": "Reforma i rehabilitació"
+                    },
+                    {
+                      "value": "interiorisme",
+                      "label": "Interiorisme"
+                    },
+                    {
+                      "value": "urbanisme",
+                      "label": "Urbanisme i planejament"
+                    },
+                    {
+                      "value": "altres",
+                      "label": "Altres consultes"
+                    }
+                  ]
+                },
+                {
+                  "type": "textarea",
+                  "name": "missatge",
+                  "label": "Descriviu el projecte",
+                  "required": true,
+                  "placeholder": "Ubicació, superfície aproximada i calendari previst..."
+                },
+                {
+                  "type": "checkbox",
+                  "name": "privacitat",
+                  "label": "He llegit i accepto la política de privacitat",
+                  "required": true
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "feature-grid",
+      "ok": true,
+      "valid": true,
+      "dropped": 0,
+      "warnings": [],
+      "missing": [],
+      "nodes": 34,
+      "ms": 9996,
+      "costUsd": 0.0012684399999999998,
+      "outputTokens": 2485,
+      "document": {
+        "title": "Features",
+        "nodes": [
+          {
+            "id": "root",
+            "parent": null,
+            "component": "Stack",
+            "props": {
+              "direction": "vertical",
+              "gap": "xl",
+              "align": "stretch",
+              "justify": "start",
+              "wrap": false
+            }
+          },
+          {
+            "id": "title",
+            "parent": "root",
+            "component": "Typography",
+            "props": {
+              "variant": "display",
+              "color": "primary",
+              "text": "Everything your notes need, nothing they don't"
+            }
+          },
+          {
+            "id": "lead",
+            "parent": "root",
+            "component": "Typography",
+            "props": {
+              "variant": "bodyLg",
+              "color": "secondary",
+              "text": "Quickly capture ideas, find them again in seconds, and keep them safe on every device."
+            }
+          },
+          {
+            "id": "grid",
+            "parent": "root",
+            "component": "Grid",
+            "props": {
+              "columns": "3",
+              "gap": "lg"
+            }
+          },
+          {
+            "id": "card-1",
+            "parent": "grid",
+            "component": "Card",
+            "props": {
+              "variant": "outlined"
+            }
+          },
+          {
+            "id": "body-1",
+            "parent": "card-1",
+            "component": "CardBody",
+            "props": {}
+          },
+          {
+            "id": "num-1",
+            "parent": "body-1",
+            "component": "Typography",
+            "props": {
+              "variant": "overline",
+              "color": "accent",
+              "text": "01"
+            }
+          },
+          {
+            "id": "h-1",
+            "parent": "body-1",
+            "component": "Typography",
+            "props": {
+              "variant": "h2",
+              "color": "primary",
+              "text": "Instant search"
+            }
+          },
+          {
+            "id": "d-1",
+            "parent": "body-1",
+            "component": "Typography",
+            "props": {
+              "variant": "body",
+              "color": "secondary",
+              "text": "Find any note across your whole library in milliseconds, including text inside attachments."
+            }
+          },
+          {
+            "id": "card-2",
+            "parent": "grid",
+            "component": "Card",
+            "props": {
+              "variant": "outlined"
+            }
+          },
+          {
+            "id": "body-2",
+            "parent": "card-2",
+            "component": "CardBody",
+            "props": {}
+          },
+          {
+            "id": "num-2",
+            "parent": "body-2",
+            "component": "Typography",
+            "props": {
+              "variant": "overline",
+              "color": "accent",
+              "text": "02"
+            }
+          },
+          {
+            "id": "h-2",
+            "parent": "body-2",
+            "component": "Typography",
+            "props": {
+              "variant": "h2",
+              "color": "primary",
+              "text": "Smart tags"
+            }
+          },
+          {
+            "id": "d-2",
+            "parent": "body-2",
+            "component": "Typography",
+            "props": {
+              "variant": "body",
+              "color": "secondary",
+              "text": "Notes are tagged automatically as you write, so related ideas gather together without manual sorting."
+            }
+          },
+          {
+            "id": "card-3",
+            "parent": "grid",
+            "component": "Card",
+            "props": {
+              "variant": "outlined"
+            }
+          },
+          {
+            "id": "body-3",
+            "parent": "card-3",
+            "component": "CardBody",
+            "props": {}
+          },
+          {
+            "id": "num-3",
+            "parent": "body-3",
+            "component": "Typography",
+            "props": {
+              "variant": "overline",
+              "color": "accent",
+              "text": "03"
+            }
+          },
+          {
+            "id": "h-3",
+            "parent": "body-3",
+            "component": "Typography",
+            "props": {
+              "variant": "h2",
+              "color": "primary",
+              "text": "Works offline"
+            }
+          },
+          {
+            "id": "d-3",
+            "parent": "body-3",
+            "component": "Typography",
+            "props": {
+              "variant": "body",
+              "color": "secondary",
+              "text": "Keep writing on a plane or in a basement. Changes sync automatically when you reconnect."
+            }
+          },
+          {
+            "id": "card-4",
+            "parent": "grid",
+            "component": "Card",
+            "props": {
+              "variant": "outlined"
+            }
+          },
+          {
+            "id": "body-4",
+            "parent": "card-4",
+            "component": "CardBody",
+            "props": {}
+          },
+          {
+            "id": "num-4",
+            "parent": "body-4",
+            "component": "Typography",
+            "props": {
+              "variant": "overline",
+              "color": "accent",
+              "text": "04"
+            }
+          },
+          {
+            "id": "h-4",
+            "parent": "body-4",
+            "component": "Typography",
+            "props": {
+              "variant": "h2",
+              "color": "primary",
+              "text": "End-to-end encryption"
+            }
+          },
+          {
+            "id": "d-4",
+            "parent": "body-4",
+            "component": "Typography",
+            "props": {
+              "variant": "body",
+              "color": "secondary",
+              "text": "Only you hold the keys to your notes. Not even we can read what you write."
+            }
+          },
+          {
+            "id": "card-5",
+            "parent": "grid",
+            "component": "Card",
+            "props": {
+              "variant": "outlined"
+            }
+          },
+          {
+            "id": "body-5",
+            "parent": "card-5",
+            "component": "CardBody",
+            "props": {}
+          },
+          {
+            "id": "num-5",
+            "parent": "body-5",
+            "component": "Typography",
+            "props": {
+              "variant": "overline",
+              "color": "accent",
+              "text": "05"
+            }
+          },
+          {
+            "id": "h-5",
+            "parent": "body-5",
+            "component": "Typography",
+            "props": {
+              "variant": "h2",
+              "color": "primary",
+              "text": "Markdown and checklists"
+            }
+          },
+          {
+            "id": "d-5",
+            "parent": "body-5",
+            "component": "Typography",
+            "props": {
+              "variant": "body",
+              "color": "secondary",
+              "text": "Write in Markdown with a live preview, and turn any line into a checklist you can tick off."
+            }
+          },
+          {
+            "id": "card-6",
+            "parent": "grid",
+            "component": "Card",
+            "props": {
+              "variant": "outlined"
+            }
+          },
+          {
+            "id": "body-6",
+            "parent": "card-6",
+            "component": "CardBody",
+            "props": {}
+          },
+          {
+            "id": "num-6",
+            "parent": "body-6",
+            "component": "Typography",
+            "props": {
+              "variant": "overline",
+              "color": "accent",
+              "text": "06"
+            }
+          },
+          {
+            "id": "h-6",
+            "parent": "body-6",
+            "component": "Typography",
+            "props": {
+              "variant": "h2",
+              "color": "primary",
+              "text": "Version history"
+            }
+          },
+          {
+            "id": "d-6",
+            "parent": "body-6",
+            "component": "Typography",
+            "props": {
+              "variant": "body",
+              "color": "secondary",
+              "text": "Restore any earlier version of a note in one click. Every edit is saved for 90 days."
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

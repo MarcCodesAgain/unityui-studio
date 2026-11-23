@@ -1,0 +1,357 @@
+/* Studio chrome. It follows UnityUI's palette: black, white, greys and one
+   electric-blue accent, square corners, 1px rules. The generated screens are
+   styled by UnityUI itself. */
+
+:root {
+  --ink: #0a0a0a;
+  --muted: #636363;
+  --faint: #888888;
+  --line: #dedede;
+  --surface: #f7f7f7;
+  --accent: #0047ff;
+  --accent-soft: #eef3ff;
+  --error: #d0021b;
+  --success: #1a7f37;
+  --warning: #b45309;
+  --mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--ink);
+}
+
+.studio {
+  display: grid;
+  grid-template-columns: minmax(320px, 380px) minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+/* Side panel */
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 28px 24px 40px;
+  border-right: 1px solid var(--line);
+  height: 100vh;
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
+}
+
+.panel-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.prompt {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field-label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.prompt textarea {
+  font: inherit;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink);
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  resize: vertical;
+  min-height: 120px;
+  transition: border-color 150ms ease;
+}
+
+.prompt textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: inset 0 -2px 0 var(--accent);
+}
+
+.prompt-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.toggle input {
+  accent-color: var(--accent);
+  margin: 0;
+}
+
+.muted {
+  color: var(--faint);
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.block-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+.examples {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.example {
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  background: none;
+  border: 1px solid transparent;
+  border-left: 2px solid transparent;
+  padding: 8px 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: var(--ink);
+}
+
+.example:hover {
+  background: var(--surface);
+}
+
+.example.active {
+  border-left-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.example-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.example-prompt {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.stats {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.stats dt {
+  font-size: 12px;
+  color: var(--faint);
+}
+
+.stats dd {
+  margin: 2px 0 0;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.stats-note,
+.check-ok {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.check-ok {
+  color: var(--success);
+}
+
+.issues {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.issues li {
+  padding-left: 10px;
+  border-left: 2px solid var(--warning);
+}
+
+.issues li.error {
+  border-left-color: var(--error);
+}
+
+.issue-kind {
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.how {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.links {
+  margin: 0;
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.links a {
+  color: var(--accent);
+  text-underline-offset: 3px;
+}
+
+/* Stage */
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--surface);
+}
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 12px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
+}
+
+.toolbar-title,
+.toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.live {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.tabs {
+  display: flex;
+  border: 1px solid var(--line);
+}
+
+.tab {
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 14px;
+  background: #ffffff;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.tab + .tab {
+  border-left: 1px solid var(--line);
+}
+
+.tab[aria-selected='true'] {
+  background: var(--ink);
+  color: #ffffff;
+}
+
+.canvas {
+  flex: 1;
+  margin: 24px;
+  padding: clamp(20px, 5vw, 56px);
+  background: #ffffff;
+  border: 1px solid var(--line);
+  min-width: 0;
+}
+
+.canvas > div {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.code {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (max-width: 860px) {
+  .studio {
+    grid-template-columns: 1fr;
+  }
+
+  .panel {
+    position: static;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+    padding: 24px 16px;
+  }
+
+  .toolbar {
+    padding: 12px 16px;
+  }
+
+  .canvas {
+    margin: 16px;
+  }
+}
